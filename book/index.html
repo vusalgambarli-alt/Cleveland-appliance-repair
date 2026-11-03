@@ -1,0 +1,1698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Online | Cleveland Appliance Repair</title>
+<meta name="description" content="Cleveland's appliance repair experts. Same-day service for refrigerators, washers, dryers, ovens, dishwashers and more. Licensed technicians.">
+
+<!-- Paid-traffic landing page: keep out of organic index -->
+<meta name="robots" content="noindex, follow">
+<meta name="googlebot" content="noindex, follow">
+<link rel="canonical" href="https://cleveland-appliancerepair.com/book/">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #c8341a;
+  --primary-dark: #a02712;
+  --dark: #1a1d24;
+  --gray-900: #2a2e36;
+  --gray-700: #5a6172;
+  --gray-500: #8b92a3;
+  --gray-300: #d8dce4;
+  --gray-100: #f4f5f8;
+  --white: #ffffff;
+  --accent: #ffb627;
+  --green: #2d8659;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Promo banner */
+.promo-banner {
+  background: #2d8659;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+.promo-banner strong {
+  background: rgba(255,255,255,0.2);
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin: 0 4px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.promo-banner a {
+  color: #ffe66d;
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: 6px;
+}
+.promo-banner a:hover { text-decoration: underline; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--dark);
+  line-height: 1.6;
+  background: var(--white);
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; width: 100%; }
+
+/* Top bar */
+.topbar {
+  background: var(--dark);
+  color: var(--white);
+  padding: 8px 0;
+  font-size: 13px;
+}
+.topbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.topbar a { color: var(--white); text-decoration: none; }
+.topbar-info { display: flex; gap: 24px; }
+.topbar-info span { display: flex; align-items: center; gap: 6px; }
+
+/* Header */
+header {
+  background: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 1px 0 var(--gray-300);
+}
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--dark);
+}
+.logo-icon {
+  height: 52px;
+  width: auto;
+  display: block;
+  flex-shrink: 0;
+}
+.footer-about .logo-icon {
+  height: 64px;
+  background: white;
+  border-radius: 10px;
+  padding: 6px 8px;
+}
+.logo-text { font-family: 'Bricolage Grotesque', sans-serif; }
+.logo-text strong { font-size: 19px; display: block; font-weight: 800; }
+.logo-text small { font-size: 11px; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.1em;}
+
+nav ul {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+nav a {
+  text-decoration: none;
+  color: var(--gray-900);
+  font-weight: 500;
+  font-size: 15px;
+  transition: color 0.15s;
+}
+nav a:hover { color: var(--primary); }
+
+.cta-phone {
+  background: var(--primary);
+  color: white !important;
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+.cta-phone:hover { background: var(--primary-dark); }
+
+.menu-btn { display: none; background: none; border: none; font-size: 24px; cursor: pointer; padding: 8px; }
+
+/* Live dispatch badge */
+.dispatch-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(45,134,89,0.14);
+  border: 1px solid rgba(45,134,89,0.35);
+  color: #1f6b46;
+  padding: 7px 14px;
+  border-radius: 100px;
+  font-size: 12.5px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+.dispatch-badge .live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2d8659;
+  flex-shrink: 0;
+  animation: livePulse 1.8s ease-in-out infinite;
+}
+@keyframes livePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(45,134,89,0.65); opacity: 1; }
+  70%      { box-shadow: 0 0 0 7px rgba(45,134,89,0); opacity: 0.85; }
+}
+.dispatch-badge.on-dark {
+  background: rgba(45,134,89,0.18);
+  border-color: rgba(91,200,138,0.4);
+  color: #a9ecc6;
+}
+.dispatch-badge.on-dark .live-dot { background: #5bc88a; }
+.hero-dispatch { margin-top: 18px; }
+
+
+.hero-ctas .dispatch-badge { align-self: center; }
+
+/* Hero */
+.hero {
+  background: radial-gradient(ellipse at 80% 10%, rgba(255,182,39,0.16), transparent 55%), radial-gradient(ellipse at 10% 90%, rgba(200,52,26,0.22), transparent 50%), linear-gradient(160deg, #101827 0%, #0a0f1a 100%);
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 50px 0 70px;
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(200,52,26,0.25) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -200px;
+  left: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,182,39,0.15) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 48px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(45,134,89,0.18);
+  color: #5bc88a;
+  padding: 8px 16px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  border: 1px solid rgba(91,200,138,0.35);
+}
+.hero h1 {
+  font-size: clamp(28px, 4vw, 46px);
+  margin-bottom: 16px;
+}
+.hero h1 .accent { color: var(--accent); }
+.hero p.lead {
+  font-size: 16px;
+  color: var(--gray-300);
+  margin-bottom: 18px;
+  max-width: 540px;
+}
+.free-diag-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(45,134,89,0.13);
+  border: 1px solid rgba(91,200,138,0.32);
+  padding: 6px 13px;
+  border-radius: 100px;
+  margin-bottom: 22px;
+  font-size: 12.5px;
+  color: #cdeeda;
+}
+.free-diag-badge strong { color: #5bc88a; font-weight: 700; }
+.diag-icon {
+  width: 17px;
+  height: 17px;
+  background: #2d8659;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 10px;
+  flex-shrink: 0;
+}
+.hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  padding: 16px 28px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+.btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); }
+
+/* Wave/pulse animation for schedule button */
+@keyframes wavePulse {
+  0%, 100% { transform: translateY(0) scale(1); box-shadow: 0 0 0 0 rgba(200,52,26,0.6), 0 0 0 0 rgba(200,52,26,0.4); }
+  50% { transform: translateY(-3px) scale(1.03); box-shadow: 0 0 0 12px rgba(200,52,26,0), 0 0 0 24px rgba(200,52,26,0); }
+}
+@keyframes arrowWave {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(6px); }
+}
+.btn-wave {
+  animation: wavePulse 1.6s ease-in-out infinite;
+  position: relative;
+  overflow: hidden;
+}
+.btn-wave::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  animation: shine 2.5s ease-in-out infinite;
+}
+@keyframes shine {
+  0% { left: -100%; }
+  60%, 100% { left: 100%; }
+}
+.btn-wave .arrow-anim {
+  display: inline-block;
+  animation: arrowWave 1.2s ease-in-out infinite;
+}
+.btn-outline {
+  background: rgba(255,255,255,0.12);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  color: white;
+  padding: 16px 28px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  border: 2px solid rgba(255,255,255,0.55);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,0.18);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.12s ease, background 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+.btn-outline:hover {
+  background: rgba(255,255,255,0.22);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.34), inset 0 1px 0 rgba(255,255,255,0.25);
+}
+.btn-outline:active {
+  transform: translateY(1px) scale(0.98);
+  background: rgba(255,255,255,0.3);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3), inset 0 2px 6px rgba(0,0,0,0.18);
+}
+.btn-outline .ring {
+  display: inline-block;
+}
+.call-now {
+  color: #ff5442;
+  font-weight: 800;
+  display: inline-block;
+}
+.btn-primary .call-now { color: #ffd9d3; }
+@media (prefers-reduced-motion: reduce) {
+  .btn-wave, .btn-wave::after, .btn-wave .arrow-anim, .live-dot { animation: none; }
+}
+
+.hero-stats {
+  display: flex;
+  gap: 32px;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  flex-wrap: wrap;
+}
+.hero-stat strong {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  display: block;
+  color: var(--accent);
+}
+.hero-stat span { font-size: 13px; color: var(--gray-300); }
+
+/* Booking form */
+.booking-card {
+  background: white;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  color: var(--dark);
+}
+.booking-card h3 { font-size: 22px; margin-bottom: 4px; }
+.booking-card .sub { color: var(--gray-500); font-size: 14px; margin-bottom: 20px; }
+.form-group { margin-bottom: 14px; }
+.form-group label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--gray-700);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid var(--gray-300);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  transition: border 0.15s;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.form-row .form-group { margin-bottom: 14px; }
+@media (max-width: 480px) {
+  .form-row { grid-template-columns: 1fr; gap: 0; }
+}
+.booking-card .btn-primary { width: 100%; justify-content: center; margin-top: 8px; }
+
+/* Contact blocks */
+.contact-block {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--gray-300);
+}
+.contact-block:last-of-type { border-bottom: none; }
+.contact-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(200,52,26,0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.contact-text { flex: 1; }
+.contact-text strong {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--gray-500);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.contact-text p {
+  font-size: 14px;
+  color: var(--dark);
+  line-height: 1.5;
+}
+.contact-text a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+.contact-text a:hover { text-decoration: underline; }
+.form-msg {
+  display: none;
+  background: #e8f5ee;
+  color: var(--green);
+  padding: 14px;
+  border-radius: 8px;
+  margin-top: 12px;
+  font-size: 14px;
+  border: 1px solid #b3dec6;
+}
+.form-msg.active { display: block; }
+
+/* Trust */
+.trust {
+  background: var(--gray-100);
+  padding: 32px 0;
+  border-bottom: 1px solid var(--gray-300);
+}
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  text-align: center;
+}
+.trust-item h4 { font-size: 32px; color: var(--primary); margin-bottom: 4px; }
+.trust-item p { font-size: 13px; color: var(--gray-700); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600;}
+
+/* Section */
+section { padding: 80px 0; }
+.section-head { text-align: center; margin-bottom: 56px; }
+.section-tag {
+  display: inline-block;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 12px;
+}
+.section-head h2 { font-size: clamp(30px, 4vw, 44px); margin-bottom: 16px; }
+.section-head p { color: var(--gray-700); font-size: 17px; max-width: 640px; margin: 0 auto; }
+
+/* Services */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.service-card {
+  background: white;
+  border: 1.5px solid var(--gray-300);
+  border-radius: 14px;
+  padding: 32px 28px;
+  transition: all 0.25s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+.service-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+}
+.service-card:hover::before { transform: scaleX(1); }
+.service-icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(200,52,26,0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.service-icon svg { width: 28px; height: 28px; stroke: var(--primary); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.service-card h3 { font-size: 20px; margin-bottom: 10px; }
+.service-card p { color: var(--gray-700); font-size: 15px; margin-bottom: 16px; }
+.service-card .learn {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Why us */
+.why-us { background: var(--gray-100); }
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.why-features { display: flex; flex-direction: column; gap: 24px; }
+.why-item {
+  display: flex;
+  gap: 20px;
+  padding: 24px;
+  background: white;
+  border-radius: 12px;
+  border-left: 4px solid var(--primary);
+}
+.why-num {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+}
+.why-text h4 { font-size: 18px; margin-bottom: 6px; }
+.why-text p { color: var(--gray-700); font-size: 14px; }
+
+.why-visual {
+  background: linear-gradient(135deg, var(--dark) 0%, #2a2e3d 100%);
+  padding: 40px;
+  border-radius: 20px;
+  color: white;
+  position: relative;
+}
+.why-visual h3 { font-size: 28px; margin-bottom: 16px; }
+.why-visual p { color: var(--gray-300); margin-bottom: 24px; }
+.checklist { list-style: none; }
+.checklist li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  font-size: 15px;
+}
+.checklist li::before {
+  content: '✓';
+  width: 22px;
+  height: 22px;
+  background: var(--green);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* Brands */
+.brands {
+  background: white;
+  padding: 60px 0;
+  border-top: 1px solid var(--gray-300);
+  border-bottom: 1px solid var(--gray-300);
+}
+.brands-title { text-align: center; margin-bottom: 32px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--gray-500); font-weight: 600;}
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+  align-items: center;
+}
+.brand-item {
+  text-align: center;
+  padding: 16px 10px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--gray-500);
+  border: 1px solid var(--gray-300);
+  border-radius: 8px;
+  transition: all 0.2s;
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.brand-item:hover { color: var(--dark); border-color: var(--gray-500); }
+
+/* Process */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+}
+.process-step {
+  text-align: center;
+  position: relative;
+}
+.process-step::after {
+  content: '→';
+  position: absolute;
+  right: -16px;
+  top: 30px;
+  color: var(--gray-300);
+  font-size: 24px;
+}
+.process-step:last-child::after { display: none; }
+.process-num {
+  width: 64px;
+  height: 64px;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  box-shadow: 0 8px 20px rgba(200,52,26,0.3);
+}
+.process-step h4 { font-size: 18px; margin-bottom: 8px; }
+.process-step p { color: var(--gray-700); font-size: 14px; }
+
+/* Testimonials */
+.testimonials { background: var(--dark); color: white; }
+.testimonials .section-head h2 { color: white; }
+.testimonials .section-head p { color: var(--gray-300); }
+.test-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.test-card {
+  background: rgba(255,255,255,0.05);
+  padding: 28px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.stars { color: var(--accent); margin-bottom: 16px; font-size: 16px; letter-spacing: 2px; }
+.test-text { font-size: 15px; line-height: 1.65; margin-bottom: 20px; color: var(--gray-300); }
+.test-author { display: flex; gap: 14px; align-items: center; }
+.test-avatar {
+  width: 44px;
+  height: 44px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+.test-name { font-weight: 600; font-size: 15px; }
+.test-loc { font-size: 13px; color: var(--gray-500); }
+
+/* Areas */
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 32px;
+}
+.area-item {
+  background: var(--gray-100);
+  padding: 14px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  border: 1px solid var(--gray-300);
+}
+
+/* FAQ */
+.faq-list { max-width: 800px; margin: 0 auto; }
+.faq-item {
+  border: 1px solid var(--gray-300);
+  border-radius: 10px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.faq-q {
+  padding: 20px 24px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.15s;
+}
+.faq-q:hover { background: var(--gray-100); }
+.faq-q .arrow { transition: transform 0.25s; color: var(--primary); }
+.faq-item.open .faq-q .arrow { transform: rotate(180deg); }
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.faq-a-inner { padding: 0 24px 20px; color: var(--gray-700); font-size: 15px; line-height: 1.7; }
+.faq-item.open .faq-a { max-height: 300px; }
+
+/* CTA */
+.cta-section {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: white;
+  text-align: center;
+  padding: 80px 0;
+}
+.cta-section h2 { font-size: clamp(28px, 4vw, 42px); margin-bottom: 16px; }
+.cta-section p { font-size: 18px; margin-bottom: 32px; opacity: 0.95; }
+.cta-section .btn-primary {
+  background: white;
+  color: var(--primary);
+  font-size: 18px;
+  padding: 18px 36px;
+}
+.cta-section .btn-primary:hover { background: var(--gray-100); }
+
+/* Footer */
+footer { background: #0f1117; color: var(--gray-300); padding: 60px 0 24px; }
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 40px;
+}
+.footer-col h5 { color: white; font-size: 15px; margin-bottom: 18px; font-family: 'Inter', sans-serif; font-weight: 600;}
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { color: var(--gray-300); text-decoration: none; font-size: 14px; transition: color 0.15s;}
+.footer-col a:hover { color: var(--accent); }
+.footer-about p { font-size: 14px; line-height: 1.7; margin-top: 16px; }
+.footer-about p.legal-entity { font-size: 12.5px; color: var(--gray-500); margin-top: 12px; }
+.footer-about p.legal-entity strong { color: var(--gray-300); }
+.footer-bottom {
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--gray-500);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  nav ul { display: none; }
+  .menu-btn { display: block; order: 3; padding: 6px; }
+  .header-inner { flex-wrap: nowrap; gap: 10px; padding: 14px 0; }
+  .logo { flex-shrink: 1; min-width: 0; gap: 8px; }
+  .logo-text strong { font-size: 14px; white-space: nowrap; }
+  .logo-text small { display: none; }
+  .logo-icon { width: 36px; height: 36px; font-size: 14px; }
+  .cta-phone { padding: 8px 12px; font-size: 12px; flex-shrink: 0; gap: 4px; }
+  .dispatch-badge { font-size: 11.5px; padding: 6px 12px; }
+  .logo-icon { height: 42px; }
+  .footer-about .logo-icon { height: 56px; }
+  .hero { padding: 40px 0 60px; background-position: 24% 24%; }
+  .hero-tag { margin-top: 8px; }
+  .hero h1 { word-break: break-word; }
+  .hero-grid, .why-grid { grid-template-columns: 1fr; gap: 40px; }
+  .hero-stats { gap: 20px; }
+  .hero-stat { flex: 1; min-width: 80px; }
+  .services-grid, .test-grid { grid-template-columns: 1fr; }
+  .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .process-grid { grid-template-columns: 1fr 1fr; }
+  .process-step::after { display: none; }
+  .brands-grid { grid-template-columns: repeat(2, 1fr); }
+  .areas-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; }
+  section { padding: 56px 0; }
+}
+@media (max-width: 480px) {
+  .logo-text strong { font-size: 12px; }
+  .logo-icon { width: 32px; height: 32px; font-size: 13px; }
+  .cta-phone { padding: 8px 10px; font-size: 11px; }
+}
+#formMsg.active { display:flex !important; }
+/* Legal Modal */
+.legal-modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  z-index: 9999;
+  overflow-y: auto;
+  padding: 40px 20px;
+}
+.legal-modal.active { display: block; }
+.legal-modal-content {
+  background: white;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 12px;
+  padding: 40px;
+  position: relative;
+  font-family: 'Inter', sans-serif;
+}
+.legal-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--gray-100);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--gray-700);
+  transition: background 0.2s;
+}
+.legal-modal-close:hover { background: var(--gray-300); }
+.legal-modal-content h1 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 32px;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+.legal-modal-content .legal-updated {
+  background: var(--gray-100);
+  padding: 12px 16px;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary);
+  font-size: 13px;
+  color: var(--gray-700);
+  margin: 20px 0;
+}
+.legal-modal-content h2 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 20px;
+  color: var(--dark);
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+.legal-modal-content p {
+  margin-bottom: 14px;
+  color: var(--gray-700);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.legal-modal-content ul {
+  margin: 0 0 18px 22px;
+  color: var(--gray-700);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.legal-modal-content ul li { margin-bottom: 6px; }
+.legal-modal-content a { color: var(--primary); text-decoration: none; }
+@media (max-width: 768px) {
+  .legal-modal-content { padding: 24px; }
+  .legal-modal-content h1 { font-size: 24px; }
+  .legal-modal-content h2 { font-size: 17px; }
+}
+
+@media (max-width:900px){.hero-grid .booking-card{order:-1}}
+</style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18185127951"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18185127951');
+</script>
+
+</head>
+<body>
+
+<div class="promo-banner">
+  <div class="container">
+    🎉 <strong>$25 OFF</strong> Your First Repair
+  </div>
+</div>
+
+<header>
+  <div class="container header-inner">
+    <a href="#" class="logo">
+      <img class="logo-icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMjAgMjQwIj4KPHBhdGggZD0iTTExMCA2IEwyMDYgMzQgVjExOCBDMjA2IDE3NiAxNjQgMjE0IDExMCAyMzQgQzU2IDIxNCAxNCAxNzYgMTQgMTE4IFYzNCBaIiBmaWxsPSIjMTQyMzNmIiBzdHJva2U9IiNlMGE0M2EiIHN0cm9rZS13aWR0aD0iNyIvPgo8cGF0aCBkPSJNMTEwIDIwIEwxOTIgNDQgVjExNiBDMTkyIDE2NiAxNTcgMTk4IDExMCAyMTcgQzYzIDE5OCAyOCAxNjYgMjggMTE2IFY0NCBaIiBmaWxsPSIjMWQzMzU4Ii8+CjxnIGZpbGw9IiMwYzE3MzAiPgo8cmVjdCB4PSI1OCIgeT0iNjIiIHdpZHRoPSIxNCIgaGVpZ2h0PSI0MCIvPjxyZWN0IHg9Ijc0IiB5PSI1MCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjUyIi8+CjxwYXRoIGQ9Ik05NyAxMDIgVjQ0IEwxMDQgMzAgTDExMSA0NCBWMTAyIFoiLz48cmVjdCB4PSIxMTMiIHk9IjU2IiB3aWR0aD0iMTYiIGhlaWdodD0iNDYiLz4KPHJlY3QgeD0iMTMxIiB5PSI2NiIgd2lkdGg9IjEyIiBoZWlnaHQ9IjM2Ii8+PHJlY3QgeD0iMTQ1IiB5PSI1OCIgd2lkdGg9IjE2IiBoZWlnaHQ9IjQ0Ii8+CjwvZz4KPGcgZmlsbD0iI2NmZDZlMiIgc3Ryb2tlPSIjMGMxNzMwIiBzdHJva2Utd2lkdGg9IjIiPgo8cmVjdCB4PSI1MCIgeT0iNzgiIHdpZHRoPSIyNiIgaGVpZ2h0PSI0MCIgcng9IjMiLz48bGluZSB4MT0iNTAiIHkxPSI5MiIgeDI9Ijc2IiB5Mj0iOTIiLz4KPHJlY3QgeD0iODIiIHk9Ijg0IiB3aWR0aD0iMjYiIGhlaWdodD0iMzQiIHJ4PSIzIi8+PGNpcmNsZSBjeD0iOTUiIGN5PSIxMDMiIHI9IjkiIGZpbGw9IiM4ZWEwYmQiLz4KPHJlY3QgeD0iMTE0IiB5PSI4NCIgd2lkdGg9IjI2IiBoZWlnaHQ9IjM0IiByeD0iMyIvPjxyZWN0IHg9IjExOSIgeT0iOTciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNCIgZmlsbD0iIzhlYTBiZCIvPgo8cmVjdCB4PSIxNDYiIHk9Ijg0IiB3aWR0aD0iMjYiIGhlaWdodD0iMzQiIHJ4PSIzIi8+PGxpbmUgeDE9IjE0NiIgeTE9Ijk0IiB4Mj0iMTcyIiB5Mj0iOTQiLz4KPC9nPgo8cGF0aCBkPSJNNjAgNzAgTDE1MCA3MCIgc3Ryb2tlPSIjY2ZkNmUyIiBzdHJva2Utd2lkdGg9IjkiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8Y2lyY2xlIGN4PSIxNTYiIGN5PSI3MCIgcj0iMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2NmZDZlMiIgc3Ryb2tlLXdpZHRoPSI3Ii8+CjxyZWN0IHg9IjE4IiB5PSIxMjYiIHdpZHRoPSIxODQiIGhlaWdodD0iNDAiIHJ4PSI2IiBmaWxsPSIjMGMxNzMwIi8+Cjx0ZXh0IHg9IjExMCIgeT0iMTU2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwgQmxhY2ssIEFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI5MDAiIGZvbnQtc2l6ZT0iMjciIGZpbGw9IiNmZmZmZmYiIGxldHRlci1zcGFjaW5nPSIwLjUiPkNMRVZFTEFORDwvdGV4dD4KPHRleHQgeD0iMTEwIiB5PSIxODYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjaywgQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjkwMCIgZm9udC1zaXplPSIxNSIgZmlsbD0iI2ZmZmZmZiI+QVBQTElBTkNFIDx0c3BhbiBmaWxsPSIjZTBhNDNhIj5SRVBBSVI8L3RzcGFuPjwvdGV4dD4KPHBhdGggZD0iTTEwNCAyMDAgbDYgLTEyIGw2IDEyIGwtMTIgLTcgaDEyIHoiIGZpbGw9IiNlMGE0M2EiLz4KPC9zdmc+" alt="Cleveland Appliance Repair logo">
+      <div class="logo-text">
+        <strong>Cleveland Appliance</strong>
+        <small>Appliance Specialists</small>
+      </div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#areas">Service Areas</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <a href="#book" class="cta-phone">📅 Book Online</a>
+    <button class="menu-btn">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="hero-tag">🌙 We're closed right now — book online and we'll call you at 8 AM</div>
+      <h1>
+        Your Appliance Broke?<br><span class="accent">Book Tonight</span> — We'll Call You at 8 AM</h1>
+      <p class="lead">All appliance brands in Cleveland — 15+ years of experience</p>
+      <div class="free-diag-badge">
+        <span class="diag-icon">✓</span>
+        <span><strong>FREE Diagnosis &amp; Warranty</strong> With Any Repair</span>
+      </div>
+      <div class="hero-ctas">
+        <a href="#book" class="btn-primary btn-wave">Schedule Now <span class="arrow-anim">→</span></a>
+        
+      </div>
+      <div class="hero-dispatch">
+        <span class="dispatch-badge on-dark"><span class="live-dot"></span>Online booking open 24/7 &nbsp;·&nbsp; Callback from 8 AM</span>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><strong>15+</strong><span>Years Experience</span></div>
+        <div class="hero-stat"><strong>98%</strong><span>First-Visit Fix</span></div>
+        <div class="hero-stat"><strong>4.9★</strong><span>Customer Rating</span></div>
+      </div>
+    </div>
+    <div class="booking-card" id="book">
+      <h3>Book a Repair</h3>
+      <p class="sub">📞 We'll call you at 8 AM to confirm your appointment.</p>
+      <form id="bookForm" action="https://formspree.io/f/mqejlbeq" method="POST">
+        <input type="hidden" name="market" value="Cleveland">
+        <input type="hidden" name="_subject" value="AFTER-HOURS booking — CLEVELAND (call at 8 AM)">
+        <input type="hidden" name="source" value="after-hours /book">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" required placeholder="John Smith" name="name">
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" required placeholder="(216) 555-0123" name="phone">
+        </div>
+        <div class="form-group">
+          <label>Service Address</label>
+          <input type="text" required placeholder="Street, City, ZIP" name="address">
+        </div>
+        <div class="form-group">
+          <label>Appliance Type</label>
+          <select name="service" required>
+            <option value="">Select an appliance...</option>
+            <option>Refrigerator</option>
+            <option>Washer</option>
+            <option>Dryer</option>
+            <option>Dishwasher</option>
+            <option>Oven / Range</option>
+            <option>Microwave</option>
+            <option>Freezer</option>
+            <option>Garbage Disposal</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Preferred Date</label>
+            <input type="date" id="prefDate" name="preferred_date" required>
+          </div>
+          <div class="form-group">
+            <label>Time Window</label>
+            <select name="time_window" id="timeWindow" required>
+              <option value="">Select a window...</option>
+              <option>8:00 AM – 10:00 AM</option>
+              <option>10:00 AM – 12:00 PM</option>
+              <option>12:00 PM – 2:00 PM</option>
+              <option>2:00 PM – 4:00 PM</option>
+              <option>4:00 PM – 6:00 PM</option>
+              <option>6:00 PM – 8:00 PM</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Brief Description</label>
+          <textarea name="message" rows="2" placeholder="What's wrong with it?"></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Request Service →</button>
+        <div class="form-msg" id="formMsg" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.7);z-index:9999;align-items:center;justify-content:center;"><div style="background:#fff;border-radius:16px;padding:2.5rem;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.3)"><div style="font-size:48px;margin-bottom:1rem">✅</div><div style="font-size:13px;font-weight:700;letter-spacing:3px;color:#e30713;text-transform:uppercase;margin-bottom:8px">Appointment Confirmed</div><h3 style="font-size:22px;font-weight:800;color:#1a3c6e;margin-bottom:0.75rem">Your Request Has Been Received!</h3><p style="font-size:15px;color:#555;line-height:1.7">Thank you! Our team will contact you within <strong>2 minutes</strong>.</p><button onclick="document.getElementById('formMsg').classList.remove('active')" style="margin-top:1.5rem;background:#e30713;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:15px;font-weight:700;cursor:pointer">Close</button></div></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="container">
+    <div class="trust-grid">
+      <div class="trust-item"><h4>15+</h4><p>Years Experience</p></div>
+      <div class="trust-item"><h4>12k+</h4><p>Repairs Completed</p></div>
+      <div class="trust-item"><h4>90</h4><p>Day Repair Warranty</p></div>
+      <div class="trust-item"><h4>8 AM</h4><p>Callback Next Morning</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">What We Fix</span>
+      <h2>Appliance Repair Services</h2>
+      <p>Every major household appliance, every major brand. If it plugs in, we can probably fix it.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="5" y1="10" x2="19" y2="10"/><line x1="8" y1="6" x2="8" y2="7"/><line x1="8" y1="14" x2="8" y2="15"/></svg>
+        </div>
+        <h3>Refrigerator Repair</h3>
+        <p>Not cooling? Leaking? Ice maker broken? Our techs diagnose and fix most refrigerator problems in a single visit.</p>
+        <a href="#book" class="learn">Book this service →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="13" r="5"/><circle cx="7" cy="7" r="0.5" fill="currentColor"/></svg>
+        </div>
+        <h3>Washer Repair</h3>
+        <p>Won't drain, won't spin, leaking, or making strange noises? We service top-load, front-load and high-efficiency machines.</p>
+        <a href="#book" class="learn">Book this service →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="13" r="5"/><path d="M9 8 L15 8"/></svg>
+        </div>
+        <h3>Dryer Repair</h3>
+        <p>Not heating, not tumbling, taking forever to dry? We fix gas and electric dryers including dryer vent cleaning.</p>
+        <a href="#book" class="learn">Book this service →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 7 L17 7"/><path d="M7 11 L17 11"/><path d="M7 15 L17 15"/></svg>
+        </div>
+        <h3>Dishwasher Repair</h3>
+        <p>Not cleaning, not draining, leaking onto the floor? Most dishwasher repairs done in under an hour.</p>
+        <a href="#book" class="learn">Book this service →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="9" r="1.5"/><circle cx="16" cy="9" r="1.5"/><rect x="6" y="13" width="12" height="5" rx="1"/></svg>
+        </div>
+        <h3>Oven & Range Repair</h3>
+        <p>Burners not working, oven won't heat, broken igniter? We service gas, electric and induction ranges from every brand.</p>
+        <a href="#book" class="learn">Book this service →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><rect x="5" y="9" width="10" height="6" rx="1"/><circle cx="19" cy="12" r="1" fill="currentColor"/></svg>
+        </div>
+        <h3>Microwave Repair</h3>
+        <p>Won't heat, sparking, turntable not turning? We repair countertop, over-the-range and built-in microwaves.</p>
+        <a href="#book" class="learn">Book this service →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="brands">
+  <div class="container">
+    <h3 class="brands-title">We Service All Major Brands</h3>
+    <div class="brands-grid">
+      <div class="brand-item">Whirlpool</div>
+      <div class="brand-item">Samsung</div>
+      <div class="brand-item">LG</div>
+      <div class="brand-item">GE</div>
+      <div class="brand-item">Maytag</div>
+      <div class="brand-item">KitchenAid</div>
+      <div class="brand-item">Bosch</div>
+      <div class="brand-item">Frigidaire</div>
+      <div class="brand-item">Kenmore</div>
+      <div class="brand-item">Electrolux</div>
+      <div class="brand-item">Sub-Zero</div>
+      <div class="brand-item">Viking</div>
+    </div>
+  </div>
+</section>
+
+<section class="why-us" id="why">
+  <div class="container">
+    <div class="why-grid">
+      <div>
+        <span class="section-tag">Why Choose Us</span>
+        <h2 style="font-size: clamp(28px, 4vw, 40px); margin-bottom: 16px;">Cleveland's Appliance Repair Crew</h2>
+        <p style="color: var(--gray-700); margin-bottom: 32px; font-size: 16px;">We're not a national franchise pretending to be local. We live here, work here, and stand behind every repair.</p>
+        <div class="why-features">
+          <div class="why-item">
+            <div class="why-num">01</div>
+            <div class="why-text">
+              <h4>Upfront Flat-Rate Pricing</h4>
+              <p>You'll know the cost before we start. No hidden fees, no surprise add-ons.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-num">02</div>
+            <div class="why-text">
+              <h4>Licensed & Insured Technicians</h4>
+              <p>Every tech is factory-trained, background-checked, and fully insured.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-num">03</div>
+            <div class="why-text">
+              <h4>90-Day Workmanship Warranty</h4>
+              <p>If the same problem comes back within 90 days, we fix it free. Period.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="why-visual">
+        <h3>What's Included</h3>
+        <p>Every service call comes with our complete commitment.</p>
+        <ul class="checklist">
+          <li>Same-day appointments available</li>
+          <li>2-hour arrival windows (no all-day waits)</li>
+          <li>Genuine OEM replacement parts</li>
+          <li>Diagnostic fee waived with repair</li>
+          <li>Senior & military discount: 10% off</li>
+          <li>90-day repair guarantee</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">How It Works</span>
+      <h2>Fast, Simple, Done Right</h2>
+      <p>From the moment you call to the moment your appliance works again — usually within 24 hours.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="process-num">1</div>
+        <h4>Book Online or Call</h4>
+        <p>Tell us what's wrong. Takes 60 seconds.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">2</div>
+        <h4>Get a Quote</h4>
+        <p>We give you a free estimate before arriving.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">3</div>
+        <h4>We Show Up</h4>
+        <p>Same or next day. Within a 2-hour window.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">4</div>
+        <h4>Fixed & Warrantied</h4>
+        <p>Most repairs done in one visit. 90-day warranty.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag" style="color: var(--accent);">Reviews</span>
+      <h2>What Our Customers Say</h2>
+      <p>Reviews from customers of our Pittsburgh team. Same company and the same standards, now serving Cleveland.</p>
+    </div>
+    <div class="test-grid">
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <p class="test-text">"Our Samsung fridge stopped cooling on a Sunday morning. Called, got a tech out by 2pm same day. Diagnosed a bad compressor relay, replaced it, done. Honest pricing too — way less than what I expected."</p>
+        <div class="test-author">
+          <div class="test-avatar">JM</div>
+          <div>
+            <div class="test-name">Jessica M.</div>
+            <div class="test-loc">Squirrel Hill, Pittsburgh</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <p class="test-text">"Dryer was making a horrible grinding noise. Mike showed up on time, found a worn drum bearing, and had it fixed in about an hour. Cleaned up after himself too. Will definitely use again."</p>
+        <div class="test-author">
+          <div class="test-avatar">RT</div>
+          <div>
+            <div class="test-name">Robert T.</div>
+            <div class="test-loc">Mt. Lebanon, PA</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <p class="test-text">"Three different shops told me my dishwasher was unfixable and I'd need a new one. These guys came out, replaced a $40 part, and saved me $900. Genuinely good people."</p>
+        <div class="test-author">
+          <div class="test-avatar">AK</div>
+          <div>
+            <div class="test-name">Amanda K.</div>
+            <div class="test-loc">Shadyside, PA</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="areas">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">Service Areas</span>
+      <h2>Where We Work</h2>
+      <p>We serve all of Greater Cleveland and the surrounding suburbs across Northeast Ohio.</p>
+    </div>
+    <div class="areas-grid">
+      <div class="area-item">Cleveland</div>
+      <div class="area-item">Downtown Cleveland</div>
+      <div class="area-item">Ohio City</div>
+      <div class="area-item">Tremont</div>
+      <div class="area-item">Detroit-Shoreway</div>
+      <div class="area-item">University Circle</div>
+      <div class="area-item">Lakewood</div>
+      <div class="area-item">Rocky River</div>
+      <div class="area-item">Bay Village</div>
+      <div class="area-item">Westlake</div>
+      <div class="area-item">Fairview Park</div>
+      <div class="area-item">North Olmsted</div>
+      <div class="area-item">Olmsted Falls</div>
+      <div class="area-item">Berea</div>
+      <div class="area-item">Middleburg Heights</div>
+      <div class="area-item">Strongsville</div>
+      <div class="area-item">North Royalton</div>
+      <div class="area-item">Parma</div>
+      <div class="area-item">Parma Heights</div>
+      <div class="area-item">Seven Hills</div>
+      <div class="area-item">Brooklyn</div>
+      <div class="area-item">Independence</div>
+      <div class="area-item">Broadview Heights</div>
+      <div class="area-item">Brecksville</div>
+      <div class="area-item">Garfield Heights</div>
+      <div class="area-item">Maple Heights</div>
+      <div class="area-item">Bedford</div>
+      <div class="area-item">Solon</div>
+      <div class="area-item">Twinsburg</div>
+      <div class="area-item">Hudson</div>
+      <div class="area-item">Beachwood</div>
+      <div class="area-item">Pepper Pike</div>
+      <div class="area-item">Shaker Heights</div>
+      <div class="area-item">Cleveland Heights</div>
+      <div class="area-item">University Heights</div>
+      <div class="area-item">South Euclid</div>
+      <div class="area-item">Lyndhurst</div>
+      <div class="area-item">Mayfield Heights</div>
+      <div class="area-item">Highland Heights</div>
+      <div class="area-item">Euclid</div>
+      <div class="area-item">Willoughby</div>
+      <div class="area-item">Mentor</div>
+      <div class="area-item">Eastlake</div>
+      <div class="area-item">Chagrin Falls</div>
+      <div class="area-item">Avon</div>
+      <div class="area-item">Avon Lake</div>
+      <div class="area-item">North Ridgeville</div>
+      <div class="area-item">Elyria</div>
+      <div class="area-item">Medina</div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="background: var(--gray-100);">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">FAQ</span>
+      <h2>Common Questions</h2>
+      <p>If your question isn't here, give us a call. We're happy to help.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">How much does an appliance repair cost? <span class="arrow">▼</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Most repairs run between $150 and $450 including parts and labor. We give you an exact flat-rate quote over the phone or at the start of the visit — before any work begins. No surprises.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can you come out the same day? <span class="arrow">▼</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Usually yes. Call before 11am and we'll almost always get a technician to you the same day. After that, next-day service is standard.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is there a service fee just to come out? <span class="arrow">▼</span></div>
+        <div class="faq-a"><div class="faq-a-inner">There's a $79 diagnostic fee for the visit, but we waive it completely if you go ahead with the repair. So if we fix it, the visit is free.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What brands do you repair? <span class="arrow">▼</span></div>
+        <div class="faq-a"><div class="faq-a-inner">All major brands — Whirlpool, Samsung, LG, GE, Maytag, KitchenAid, Bosch, Frigidaire, Kenmore, Electrolux, Sub-Zero, Viking, and pretty much anything else. If you don't see your brand listed, just ask.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do you offer a warranty? <span class="arrow">▼</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Yes — every repair comes with a 90-day workmanship warranty. If the same issue returns within 90 days, we come back and fix it at no charge.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is it worth repairing an old appliance? <span class="arrow">▼</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Usually yes, if the repair costs less than half of replacement. Our techs will tell you honestly if a repair makes sense or if you're better off buying new. We don't push repairs that don't make financial sense.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Broken Appliance? Don't Wait.</h2>
+    <p>Same-day service available across Greater Cleveland. Call now or book online.</p>
+    <a href="#book" class="btn-primary">📅 Book Your Repair Online</a>
+    <div style="margin-top:18px;"><span class="dispatch-badge on-dark"><span class="live-dot"></span>Online booking open 24/7 &nbsp;·&nbsp; Callback from 8 AM</span></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-about">
+        <a href="#" class="logo" style="color: white;">
+          <img class="logo-icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMjAgMjQwIj4KPHBhdGggZD0iTTExMCA2IEwyMDYgMzQgVjExOCBDMjA2IDE3NiAxNjQgMjE0IDExMCAyMzQgQzU2IDIxNCAxNCAxNzYgMTQgMTE4IFYzNCBaIiBmaWxsPSIjMTQyMzNmIiBzdHJva2U9IiNlMGE0M2EiIHN0cm9rZS13aWR0aD0iNyIvPgo8cGF0aCBkPSJNMTEwIDIwIEwxOTIgNDQgVjExNiBDMTkyIDE2NiAxNTcgMTk4IDExMCAyMTcgQzYzIDE5OCAyOCAxNjYgMjggMTE2IFY0NCBaIiBmaWxsPSIjMWQzMzU4Ii8+CjxnIGZpbGw9IiMwYzE3MzAiPgo8cmVjdCB4PSI1OCIgeT0iNjIiIHdpZHRoPSIxNCIgaGVpZ2h0PSI0MCIvPjxyZWN0IHg9Ijc0IiB5PSI1MCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjUyIi8+CjxwYXRoIGQ9Ik05NyAxMDIgVjQ0IEwxMDQgMzAgTDExMSA0NCBWMTAyIFoiLz48cmVjdCB4PSIxMTMiIHk9IjU2IiB3aWR0aD0iMTYiIGhlaWdodD0iNDYiLz4KPHJlY3QgeD0iMTMxIiB5PSI2NiIgd2lkdGg9IjEyIiBoZWlnaHQ9IjM2Ii8+PHJlY3QgeD0iMTQ1IiB5PSI1OCIgd2lkdGg9IjE2IiBoZWlnaHQ9IjQ0Ii8+CjwvZz4KPGcgZmlsbD0iI2NmZDZlMiIgc3Ryb2tlPSIjMGMxNzMwIiBzdHJva2Utd2lkdGg9IjIiPgo8cmVjdCB4PSI1MCIgeT0iNzgiIHdpZHRoPSIyNiIgaGVpZ2h0PSI0MCIgcng9IjMiLz48bGluZSB4MT0iNTAiIHkxPSI5MiIgeDI9Ijc2IiB5Mj0iOTIiLz4KPHJlY3QgeD0iODIiIHk9Ijg0IiB3aWR0aD0iMjYiIGhlaWdodD0iMzQiIHJ4PSIzIi8+PGNpcmNsZSBjeD0iOTUiIGN5PSIxMDMiIHI9IjkiIGZpbGw9IiM4ZWEwYmQiLz4KPHJlY3QgeD0iMTE0IiB5PSI4NCIgd2lkdGg9IjI2IiBoZWlnaHQ9IjM0IiByeD0iMyIvPjxyZWN0IHg9IjExOSIgeT0iOTciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNCIgZmlsbD0iIzhlYTBiZCIvPgo8cmVjdCB4PSIxNDYiIHk9Ijg0IiB3aWR0aD0iMjYiIGhlaWdodD0iMzQiIHJ4PSIzIi8+PGxpbmUgeDE9IjE0NiIgeTE9Ijk0IiB4Mj0iMTcyIiB5Mj0iOTQiLz4KPC9nPgo8cGF0aCBkPSJNNjAgNzAgTDE1MCA3MCIgc3Ryb2tlPSIjY2ZkNmUyIiBzdHJva2Utd2lkdGg9IjkiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8Y2lyY2xlIGN4PSIxNTYiIGN5PSI3MCIgcj0iMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2NmZDZlMiIgc3Ryb2tlLXdpZHRoPSI3Ii8+CjxyZWN0IHg9IjE4IiB5PSIxMjYiIHdpZHRoPSIxODQiIGhlaWdodD0iNDAiIHJ4PSI2IiBmaWxsPSIjMGMxNzMwIi8+Cjx0ZXh0IHg9IjExMCIgeT0iMTU2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwgQmxhY2ssIEFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI5MDAiIGZvbnQtc2l6ZT0iMjciIGZpbGw9IiNmZmZmZmYiIGxldHRlci1zcGFjaW5nPSIwLjUiPkNMRVZFTEFORDwvdGV4dD4KPHRleHQgeD0iMTEwIiB5PSIxODYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjaywgQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjkwMCIgZm9udC1zaXplPSIxNSIgZmlsbD0iI2ZmZmZmZiI+QVBQTElBTkNFIDx0c3BhbiBmaWxsPSIjZTBhNDNhIj5SRVBBSVI8L3RzcGFuPjwvdGV4dD4KPHBhdGggZD0iTTEwNCAyMDAgbDYgLTEyIGw2IDEyIGwtMTIgLTcgaDEyIHoiIGZpbGw9IiNlMGE0M2EiLz4KPC9zdmc+" alt="Cleveland Appliance Repair logo">
+          <div class="logo-text">
+            <strong style="color: white;">Cleveland Appliance</strong>
+            <small>Appliance Specialists</small>
+          </div>
+        </a>
+        <p>Family-owned appliance repair service serving the Greater Cleveland area, with 15+ years of hands-on experience. Licensed, insured and committed to honest work.</p>
+        <p class="legal-entity">Cleveland Appliance Repair is a service brand of <strong>G-Pro Appliance Repair LLC</strong>.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Refrigerator</a></li>
+          <li><a href="#services">Washer</a></li>
+          <li><a href="#services">Dryer</a></li>
+          <li><a href="#services">Dishwasher</a></li>
+          <li><a href="#services">Oven & Range</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#why">Why Us</a></li>
+          <li><a href="#process">How It Works</a></li>
+          <li><a href="#areas">Service Areas</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li>📞 (216) 539-5060 (8 AM – 5 PM)</li>
+          <li>📍 Greater Cleveland, OH</li>
+          <li>🕐 Phone: 8 AM – 5 PM daily · Online booking 24/7</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 G-Pro Appliance Repair LLC. All rights reserved. • <a href="#" onclick="openLegal('privacy'); return false;" style="color: var(--gray-300); cursor: pointer;">Privacy Policy</a> • <a href="#" onclick="openLegal('terms'); return false;" style="color: var(--gray-300); cursor: pointer;">Terms of Service</a></div>
+      <div>Licensed • Insured • Bonded</div>
+    </div>
+  </div>
+</footer>
+
+<!-- Privacy Policy Modal -->
+<div class="legal-modal" id="privacyModal" onclick="if(event.target===this) closeLegal()">
+  <div class="legal-modal-content">
+    <button class="legal-modal-close" onclick="closeLegal()">×</button>
+    <h1>Privacy Policy</h1>
+    <div class="legal-updated"><strong>Last updated:</strong> August 26, 2026</div>
+
+    <h2>1. Introduction</h2>
+    <p>G-Pro Appliance Repair LLC, operating as Cleveland Appliance Repair ("we", "us", or "our"), operates the website cleveland-appliancerepair.com (the "Service"). This page informs you of our policies regarding the collection, use, and disclosure of personal information when you use our Service.</p>
+    <p>We use your data only to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this policy.</p>
+
+    <h2>2. Information We Collect</h2>
+    <p>When you use our website or request service, we may collect the following information:</p>
+    <ul>
+      <li><strong>Personal Information:</strong> Name, phone number, email address, and service address</li>
+      <li><strong>Service Information:</strong> Appliance type, problem description, and preferred service time</li>
+      <li><strong>Usage Data:</strong> IP address, browser type, pages visited, and time spent on our website</li>
+      <li><strong>Cookies:</strong> Small data files stored on your device to improve user experience</li>
+    </ul>
+
+    <h2>3. How We Use Your Information</h2>
+    <p>We use the collected information for the following purposes:</p>
+    <ul>
+      <li>To schedule and provide appliance repair services</li>
+      <li>To contact you about your service request or appointment</li>
+      <li>To send service confirmations, follow-ups, and invoices</li>
+      <li>To improve our website and services</li>
+      <li>To comply with legal obligations</li>
+    </ul>
+
+    <h2>4. Information Sharing</h2>
+    <p>We do not sell, trade, or rent your personal information to third parties. We may share your information only in the following limited situations:</p>
+    <ul>
+      <li>With service technicians who will perform the repair at your location</li>
+      <li>With trusted service providers (e.g., Formspree for form submissions, Google Analytics for website analytics)</li>
+      <li>When required by law or to protect our legal rights</li>
+    </ul>
+
+    <h2>5. Cookies and Tracking Technologies</h2>
+    <p>Our website uses cookies and similar tracking technologies to track activity on our Service. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service.</p>
+    <p>We may use Google Analytics and Google Ads conversion tracking to understand how visitors use our site.</p>
+
+    <h2>6. Data Security</h2>
+    <p>We take the security of your personal information seriously and use industry-standard practices to protect it. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
+
+    <h2>7. Your Rights</h2>
+    <p>You have the right to:</p>
+    <ul>
+      <li>Access the personal information we hold about you</li>
+      <li>Request correction of inaccurate information</li>
+      <li>Request deletion of your personal information</li>
+      <li>Opt out of marketing communications at any time</li>
+    </ul>
+    <p>To exercise any of these rights, please call us at (216) 539-5060.</p>
+
+    <h2>8. Children's Privacy</h2>
+    <p>Our Service does not address anyone under the age of 18. We do not knowingly collect personally identifiable information from children under 18.</p>
+
+    <h2>9. Changes to This Privacy Policy</h2>
+    <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.</p>
+
+    <h2>10. Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy, please contact us:</p>
+    <ul>
+      <li>By phone: <a href="tel:2165395060">(216) 539-5060</a></li>
+      <li>By mail: Greater Cleveland, OH</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Terms of Service Modal -->
+<div class="legal-modal" id="termsModal" onclick="if(event.target===this) closeLegal()">
+  <div class="legal-modal-content">
+    <button class="legal-modal-close" onclick="closeLegal()">×</button>
+    <h1>Terms of Service</h1>
+    <div class="legal-updated"><strong>Last updated:</strong> August 26, 2026</div>
+
+    <h2>1. Agreement to Terms</h2>
+    <p>By accessing or using the website cleveland-appliancerepair.com (the "Service") operated by G-Pro Appliance Repair LLC, doing business as Cleveland Appliance Repair ("we", "us", or "our"), you agree to be bound by these Terms of Service ("Terms"). If you disagree with any part of these Terms, please do not use our Service.</p>
+
+    <h2>2. Services Provided</h2>
+    <p>Cleveland Appliance Repair offers professional appliance repair services for residential customers in the Greater Cleveland area. Our services include but are not limited to:</p>
+    <ul>
+      <li>Refrigerator and freezer repair</li>
+      <li>Washing machine repair</li>
+      <li>Dryer repair</li>
+      <li>Dishwasher repair</li>
+      <li>Oven, stove, and range repair</li>
+      <li>Microwave repair</li>
+      <li>Diagnostic services</li>
+    </ul>
+
+    <h2>3. Service Appointments</h2>
+    <p>When you book an appointment through our website or by phone, you agree to:</p>
+    <ul>
+      <li>Provide accurate contact and address information</li>
+      <li>Be present (or have an authorized adult present) at the time of service</li>
+      <li>Provide safe access to the appliance requiring service</li>
+      <li>Notify us at least 2 hours in advance if you need to cancel or reschedule</li>
+    </ul>
+
+    <h2>4. Pricing and Payment</h2>
+    <p>All prices are quoted in U.S. dollars. We provide free diagnostics with any repair. Payment is due upon completion of service unless otherwise agreed in writing. We accept cash, major credit cards, and approved digital payment methods.</p>
+    <p>Any promotions, discounts, or coupons (such as the $25 OFF First Repair offer) are subject to specific terms and cannot be combined with other offers unless explicitly stated.</p>
+
+    <h2>5. Warranty</h2>
+    <p>We stand behind our work. Most repairs come with a 90-day labor warranty and a parts warranty as provided by the manufacturer. The warranty covers the specific repair performed and does not extend to unrelated issues or pre-existing conditions of the appliance.</p>
+    <p>Warranty is void if:</p>
+    <ul>
+      <li>The appliance is serviced by a third party after our repair</li>
+      <li>The appliance is misused, abused, or damaged</li>
+      <li>Modifications are made to the appliance without our consent</li>
+    </ul>
+
+    <h2>6. Limitation of Liability</h2>
+    <p>To the maximum extent permitted by law, Cleveland Appliance Repair shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, or other intangible losses, resulting from your use or inability to use the Service.</p>
+    <p>Our total liability for any claim arising from our services shall not exceed the amount you paid for the specific service.</p>
+
+    <h2>7. Customer Responsibilities</h2>
+    <p>You agree to:</p>
+    <ul>
+      <li>Provide accurate information about the appliance and the issue</li>
+      <li>Disclose any prior repairs or modifications to the appliance</li>
+      <li>Ensure the work area is reasonably clear and accessible</li>
+      <li>Keep children and pets away from the work area during service</li>
+    </ul>
+
+    <h2>8. Cancellation Policy</h2>
+    <p>You may cancel a scheduled appointment without charge with at least 2 hours notice. Cancellations made with less than 2 hours notice, or no-show appointments, may be subject to a service call fee.</p>
+
+    <h2>9. Intellectual Property</h2>
+    <p>All content on this website, including text, graphics, logos, and images, is the property of Cleveland Appliance Repair and is protected by copyright laws. You may not reproduce, distribute, or use any content without our written permission.</p>
+
+    <h2>10. Third-Party Links</h2>
+    <p>Our Service may contain links to third-party websites or services that are not owned or controlled by Cleveland Appliance Repair. We have no control over and assume no responsibility for the content or practices of any third-party websites.</p>
+
+    <h2>11. Changes to Terms</h2>
+    <p>We reserve the right to modify these Terms at any time. Changes will be effective immediately upon posting to this website. Your continued use of the Service after any changes constitutes acceptance of the new Terms.</p>
+
+    <h2>12. Governing Law</h2>
+    <p>These Terms shall be governed by and construed in accordance with the laws of the State of Ohio, United States, without regard to its conflict of law provisions.</p>
+
+    <h2>13. Contact Us</h2>
+    <p>If you have any questions about these Terms, please contact us:</p>
+    <ul>
+      <li>By phone: <a href="tel:2165395060">(216) 539-5060</a></li>
+      <li>By mail: Greater Cleveland, OH</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+// Legal modal functions
+function openLegal(type) {
+  document.getElementById(type + 'Modal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeLegal() {
+  document.querySelectorAll('.legal-modal').forEach(m => m.classList.remove('active'));
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLegal();
+});
+</script>
+
+<script>
+// Mobile menu
+document.querySelector('.menu-btn').addEventListener('click', () => {
+  const ul = document.querySelector('nav ul');
+  ul.style.display = ul.style.display === 'flex' ? 'none' : 'flex';
+  ul.style.flexDirection = 'column';
+  ul.style.position = 'absolute';
+  ul.style.top = '100%';
+  ul.style.left = '0';
+  ul.style.right = '0';
+  ul.style.background = 'white';
+  ul.style.padding = '20px';
+  ul.style.gap = '16px';
+  ul.style.borderBottom = '1px solid #d8dce4';
+});
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.parentElement;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+
+// Booking form
+const BOOKING_ENDPOINT = 'https://formspree.io/f/mqejlbeq';
+document.getElementById('bookForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
+  const msg = document.getElementById('formMsg');
+  try {
+    const response = await fetch(BOOKING_ENDPOINT, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (response.ok) {
+      msg.classList.add('active');
+      form.reset();
+      setTimeout(() => msg.classList.remove('active'), 4000);
+    } else {
+      alert('Something went wrong. Please call us at (216) 539-5060');
+    }
+  } catch (error) {
+    alert('Something went wrong. Please call us at (216) 539-5060');
+  }
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', (e) => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+
+<script>
+/* Booking date: today through 60 days out. */
+(function () {
+  var d = document.getElementById('prefDate');
+  if (!d) return;
+  function iso(dt) {
+    return dt.getFullYear() + '-' +
+      String(dt.getMonth() + 1).padStart(2, '0') + '-' +
+      String(dt.getDate()).padStart(2, '0');
+  }
+  var today = new Date();
+  var max = new Date();
+  max.setDate(max.getDate() + 60);
+  d.min = iso(today);
+  d.max = iso(max);
+})();
+</script>
+</body>
+</html>
