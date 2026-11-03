@@ -7,7 +7,7 @@
 User-agent: *
 Allow: /
 
-# Google Ads landing page review (clevelandappliance.com)
+# Google Ads landing page review (cleveland-appliancerepair.com)
 User-agent: AdsBot-Google
 Allow: /
 
