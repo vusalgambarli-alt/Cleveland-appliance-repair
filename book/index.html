@@ -59,6 +59,17 @@ html, body {
 }
 .promo-banner a:hover { text-decoration: underline; }
 
+
+/* Live hours bar */
+.hours-bar { background:#14233f; color:#fff; padding:9px 0; text-align:center; font-size:14px; font-weight:500; line-height:1.4; }
+.hours-bar .hb-dot { display:inline-block; width:9px; height:9px; border-radius:50%; background:#3ddc84; margin-right:7px; vertical-align:middle; box-shadow:0 0 0 3px rgba(61,220,132,.25); }
+.hours-bar.closed .hb-dot { background:#f5b942; box-shadow:0 0 0 3px rgba(245,185,66,.25); }
+.hours-bar strong { color:#ffe66d; }
+.hours-bar a { color:#ffe66d; font-weight:700; text-decoration:none; margin-left:6px; white-space:nowrap; }
+.hours-bar a:hover { text-decoration:underline; }
+.hours-bar .hb-sub { opacity:.75; font-size:12.5px; margin-left:8px; white-space:nowrap; }
+@media (max-width:600px){ .hours-bar .hb-sub{ display:block; margin:2px 0 0; } }
+
 html { scroll-behavior: smooth; }
 
 body {
@@ -967,6 +978,28 @@ footer { background: #0f1117; color: var(--gray-300); padding: 60px 0 24px; }
     🎉 <strong>$25 OFF</strong> Your First Repair
   </div>
 </div>
+
+<div class="hours-bar" id="hoursBar">
+  <div class="container" id="hoursBarText">🕐 Open 8 AM – 5 PM daily · Book online 24/7</div>
+</div>
+<script>
+(function(){
+  var PHONE='(216) 539-5060', TEL='tel:+12165395060', BOOK='./';
+  function etHour(){
+    try{ var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).formatToParts(new Date());
+      for(var i=0;i<p.length;i++){ if(p[i].type==='hour') return parseInt(p[i].value,10)%24; } }catch(e){}
+    return new Date().getHours();
+  }
+  function render(){
+    var h=etHour(), el=document.getElementById('hoursBarText'), bar=document.getElementById('hoursBar'), sub='<span class="hb-sub">Hours: 8 AM – 5 PM daily · Online booking 24/7</span>';
+    if(h>=8 && h<12){ bar.className='hours-bar'; el.innerHTML='<span class="hb-dot"></span>Open now · <strong>Same-day service — call until 12 PM</strong><a href="'+TEL+'">📞 '+PHONE+'</a>'+sub; }
+    else if(h>=12 && h<17){ bar.className='hours-bar'; el.innerHTML='<span class="hb-dot"></span>Open now · <strong>Same-day service — call until 5 PM</strong><a href="'+TEL+'">📞 '+PHONE+'</a>'+sub; }
+    else { bar.className='hours-bar closed'; el.innerHTML='<span class="hb-dot"></span>Closed now · <strong>Book online 24/7 — we call you at 8 AM</strong><a href="'+BOOK+'">Book Online →</a>'+sub; }
+  }
+  render(); setInterval(render,60000);
+})();
+</script>
+
 
 <header>
   <div class="container header-inner">
