@@ -993,7 +993,7 @@ footer { background: #0f1117; color: var(--gray-300); padding: 60px 0 24px; }
     var h=etHour(), el=document.getElementById('hoursBarText'), bar=document.getElementById('hoursBar'), sub='<span class="hb-sub">Hours: 8 AM – 5 PM daily · Online booking 24/7</span>';
     if(h>=8 && h<12){ bar.className='hours-bar'; el.innerHTML='<span class="hb-dot"></span>Open now · <strong>Same-day service — call until 12 PM</strong><a href="'+TEL+'">📞 '+PHONE+'</a>'+sub; }
     else if(h>=12 && h<17){ bar.className='hours-bar'; el.innerHTML='<span class="hb-dot"></span>Open now · <strong>Same-day service — call until 5 PM</strong><a href="'+TEL+'">📞 '+PHONE+'</a>'+sub; }
-    else { bar.className='hours-bar closed'; el.innerHTML='<span class="hb-dot"></span>Closed now · <strong>Book online 24/7 — we call you at 8 AM</strong><a href="'+BOOK+'">Book Online →</a>'+sub; }
+    else { bar.className='hours-bar'; el.innerHTML='<span class="hb-dot"></span><strong>Book online 24/7 — we call you at 8 AM</strong><a href="'+BOOK+'">Book Online →</a>'+sub; }
   }
   render(); setInterval(render,60000);
 })();
