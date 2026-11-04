@@ -60,15 +60,6 @@ html, body {
 .promo-banner a:hover { text-decoration: underline; }
 
 
-/* Live hours bar */
-.hours-bar { background:#14233f; color:#fff; padding:9px 0; text-align:center; font-size:14px; font-weight:500; line-height:1.4; }
-.hours-bar .hb-dot { display:inline-block; width:9px; height:9px; border-radius:50%; background:#3ddc84; margin-right:7px; vertical-align:middle; box-shadow:0 0 0 3px rgba(61,220,132,.25); }
-.hours-bar.closed .hb-dot { background:#f5b942; box-shadow:0 0 0 3px rgba(245,185,66,.25); }
-.hours-bar strong { color:#ffe66d; }
-.hours-bar a { color:#ffe66d; font-weight:700; text-decoration:none; margin-left:6px; white-space:nowrap; }
-.hours-bar a:hover { text-decoration:underline; }
-.hours-bar .hb-sub { opacity:.75; font-size:12.5px; margin-left:8px; white-space:nowrap; }
-@media (max-width:600px){ .hours-bar .hb-sub{ display:block; margin:2px 0 0; } }
 
 html { scroll-behavior: smooth; }
 
@@ -978,26 +969,6 @@ footer { background: #0f1117; color: var(--gray-300); padding: 60px 0 24px; }
   </div>
 </div>
 
-<div class="hours-bar" id="hoursBar">
-  <div class="container" id="hoursBarText">🕐 Open 8 AM – 5 PM daily · Book online 24/7</div>
-</div>
-<script>
-(function(){
-  var PHONE='(216) 539-5060', TEL='tel:+12165395060', BOOK='book/';
-  function etHour(){
-    try{ var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).formatToParts(new Date());
-      for(var i=0;i<p.length;i++){ if(p[i].type==='hour') return parseInt(p[i].value,10)%24; } }catch(e){}
-    return new Date().getHours();
-  }
-  function render(){
-    var h=etHour(), el=document.getElementById('hoursBarText'), bar=document.getElementById('hoursBar'), sub='<span class="hb-sub">Hours: 8 AM – 5 PM daily · Online booking 24/7</span>';
-    if(h>=8 && h<12){ bar.className='hours-bar'; el.innerHTML='<span class="hb-dot"></span>Open now · <strong>Same-day service — call until 12 PM</strong><a href="'+TEL+'">📞 '+PHONE+'</a>'+sub; }
-    else if(h>=12 && h<17){ bar.className='hours-bar'; el.innerHTML='<span class="hb-dot"></span>Open now · <strong>Same-day service — call until 5 PM</strong><a href="'+TEL+'">📞 '+PHONE+'</a>'+sub; }
-    else { bar.className='hours-bar'; el.innerHTML='<span class="hb-dot"></span><strong>Book online 24/7 — we call you at 8 AM</strong><a href="'+BOOK+'">Book Online →</a>'+sub; }
-  }
-  render(); setInterval(render,60000);
-})();
-</script>
 
 
 <header>
@@ -1028,7 +999,7 @@ footer { background: #0f1117; color: var(--gray-300); padding: 60px 0 24px; }
     <div>
       <div class="hero-tag">⚡ Same-Day Service Across Greater Cleveland</div>
       <h1>
-        Your Appliance Broke?<br><span class="accent">Same &amp; Next-Day Service</span><br><span style="font-size:.62em;display:inline-block;margin-top:.35em">📞 Call 8 AM–5 PM &nbsp;·&nbsp; 📅 Book Online 24/7</span></h1>
+        Your Appliance Broke?<br><span class="accent">Same &amp; Next-Day Service</span><br><span id="heroCall" style="font-size:.62em;display:inline-block;margin-top:.35em">📞 Call 8 AM–5 PM &nbsp;·&nbsp; 📅 Book Online 24/7</span></h1>
       <p class="lead">All appliance brands in Cleveland — 15+ years of experience</p>
       <div class="free-diag-badge">
         <span class="diag-icon">✓</span>
@@ -1723,6 +1694,14 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   max.setDate(max.getDate() + 60);
   d.min = iso(today);
   d.max = iso(max);
+})();
+</script>
+<script>
+(function(){
+  function etHour(){try{var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).formatToParts(new Date());for(var i=0;i<p.length;i++){if(p[i].type==='hour')return parseInt(p[i].value,10)%24;}}catch(e){}return new Date().getHours();}
+  function render(){var h=etHour(),el=document.getElementById('heroCall');if(!el)return;
+    if(h>=8&&h<12)el.innerHTML='📞 Call Before 12 PM — Same-Day Repair';else if(h>=12&&h<17)el.innerHTML='📞 Call Before 5 PM — Same-Day Repair';else el.innerHTML='📅 Book Online Now — We Call You at 8 AM';}
+  render();setInterval(render,60000);
 })();
 </script>
 </body>
