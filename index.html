@@ -1039,7 +1039,7 @@ nav a:hover { color: var(--accent); }
         <a href="tel:2165395060" class="btn-outline"><span class="ring">📞</span> <span class="call-now">Call Now</span> — (216) 539-5060</a>
       </div>
       <div class="hero-dispatch">
-        <span class="dispatch-badge on-dark"><span class="live-dot"></span>Open 8 AM – 5 PM daily &nbsp;·&nbsp; Book online 24/7</span>
+        <span class="dispatch-badge on-dark"><span class="live-dot"></span><span id="heroResp">⚡ We respond within minutes</span></span>
       </div>
       <div class="hero-stats">
         <div class="hero-stat"><strong>15+</strong><span>Years Experience</span></div>
@@ -1922,6 +1922,13 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   function etHour(){try{var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).formatToParts(new Date());for(var i=0;i<p.length;i++){if(p[i].type==='hour')return parseInt(p[i].value,10)%24;}}catch(e){}return new Date().getHours();}
   function render(){var h=etHour(),el=document.getElementById('heroCall');if(!el)return;
     if(h>=8&&h<12)el.innerHTML='📞 Call Before 12 PM — Same-Day Repair';else if(h>=12&&h<17)el.innerHTML='📞 Call Before 5 PM — Same-Day Repair';else el.innerHTML='📅 Book Online Now — We Call You at 8 AM';}
+  render();setInterval(render,60000);
+})();
+</script>
+<script>
+(function(){
+  function etHour(){try{var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).formatToParts(new Date());for(var i=0;i<p.length;i++){if(p[i].type==='hour')return parseInt(p[i].value,10)%24;}}catch(e){}return new Date().getHours();}
+  function render(){var el=document.getElementById('heroResp');if(!el)return;var h=etHour();el.textContent=(h>=8&&h<17)?'⚡ We respond within minutes':'📅 Book online — we call you at 8 AM';}
   render();setInterval(render,60000);
 })();
 </script>
