@@ -1028,7 +1028,7 @@ nav a:hover { color: var(--accent); }
   <div class="container hero-grid">
     <div>
       <h1>
-        Your Appliance Broke?<br><span class="accent">Same &amp; Next-Day Service</span><br><span id="heroCall" style="font-size:.62em;display:inline-block;margin-top:.35em">📞 Call 8 AM–5 PM &nbsp;·&nbsp; 📅 Book Online 24/7</span></h1>
+        Your Appliance Broke?<br><span class="accent">Same-Day Service</span><br><span id="heroCall" style="font-size:.62em;display:inline-block;margin-top:.35em">📞 Call 8 AM–5 PM &nbsp;·&nbsp; 📅 Book Online 24/7</span></h1>
       <p class="lead">All appliance brands in Cleveland &amp; surrounding suburbs</p>
       <div class="free-diag-badge">
         <span class="diag-icon">✓</span>
@@ -1921,7 +1921,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 (function(){
   function etHour(){try{var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).formatToParts(new Date());for(var i=0;i<p.length;i++){if(p[i].type==='hour')return parseInt(p[i].value,10)%24;}}catch(e){}return new Date().getHours();}
   function render(){var h=etHour(),el=document.getElementById('heroCall');if(!el)return;
-    if(h>=8&&h<12)el.innerHTML='📞 Call Before 12 PM — Same-Day Repair';else if(h>=12&&h<17)el.innerHTML='📞 Call Before 5 PM — Same-Day Repair';else el.innerHTML='📅 Book Online Now — We Call You at 8 AM';}
+    if(h>=8&&h<12)el.innerHTML='📞 Call Before 12 PM';else if(h>=12&&h<17)el.innerHTML='📞 Call Before 5 PM';else el.innerHTML='📅 Book Online Now — We Call You at 8 AM';}
   render();setInterval(render,60000);
 })();
 </script>
