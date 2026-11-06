@@ -746,6 +746,10 @@ section { padding: 80px 0; }
 .test-name { font-weight: 600; font-size: 15px; }
 .test-loc { font-size: 13px; color: var(--gray-500); }
 
+.rev-summary { display:inline-flex; align-items:center; gap:10px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:999px; padding:8px 18px; margin:6px 0 14px; }
+.rev-score { font-family:'Bricolage Grotesque', sans-serif; font-weight:800; font-size:20px; color:white; }
+.rev-stars { color: var(--accent); letter-spacing:2px; }
+.rev-count { font-size:14px; color: var(--gray-300); }
 /* Areas */
 .areas-grid {
   display: grid;
@@ -1252,39 +1256,73 @@ footer { background: #0f1117; color: var(--gray-300); padding: 60px 0 24px; }
     <div class="section-head">
       <span class="section-tag" style="color: var(--accent);">Reviews</span>
       <h2>What Our Customers Say</h2>
-      <p>Reviews from customers of our Pittsburgh team. Same company and the same standards, now serving Cleveland.</p>
+      <div class="rev-summary"><span class="rev-score">5.0</span><span class="rev-stars">★★★★★</span><span class="rev-count">69 Google reviews</span></div>
+      <p>Real Google reviews for Proliance Appliance Repair, our parent company. Same technicians, same standards, now serving Greater Cleveland.</p>
     </div>
     <div class="test-grid">
       <div class="test-card">
         <div class="stars">★★★★★</div>
-        <p class="test-text">"Our Samsung fridge stopped cooling on a Sunday morning. Called, got a tech out by 2pm same day. Diagnosed a bad compressor relay, replaced it, done. Honest pricing too — way less than what I expected."</p>
+        <p class="test-text">"Proliance did a great job and I’m very pleased with their thoroughness. Marlow was able to diagnose the issue within 10 minutes and also provided a detailed explanation of what was wrong. They could have the replacement parts within a matter of days and the service call fee will be taken off the repair costs. Excellent service!"</p>
         <div class="test-author">
-          <div class="test-avatar">JM</div>
+          <div class="test-avatar">MN</div>
           <div>
-            <div class="test-name">Jessica M.</div>
-            <div class="test-loc">Squirrel Hill, Pittsburgh</div>
+            <div class="test-name">Mark N.</div>
+            <div class="test-loc">Google review · Oct 2026</div>
           </div>
         </div>
       </div>
       <div class="test-card">
         <div class="stars">★★★★★</div>
-        <p class="test-text">"Dryer was making a horrible grinding noise. Mike showed up on time, found a worn drum bearing, and had it fixed in about an hour. Cleaned up after himself too. Will definitely use again."</p>
+        <p class="test-text">"William came to my home and found the issue in sub 10 minutes. Not only that, but he had it fixed and working again (my dryer) in sub 25 mins. I recommend this company to anyone who wants to save time and resources on purchasing a new appliance."</p>
         <div class="test-author">
-          <div class="test-avatar">RT</div>
+          <div class="test-avatar">NF</div>
           <div>
-            <div class="test-name">Robert T.</div>
-            <div class="test-loc">Mt. Lebanon, PA</div>
+            <div class="test-name">Naomi F.</div>
+            <div class="test-loc">Google review · Oct 2026</div>
           </div>
         </div>
       </div>
       <div class="test-card">
         <div class="stars">★★★★★</div>
-        <p class="test-text">"Three different shops told me my dishwasher was unfixable and I'd need a new one. These guys came out, replaced a $40 part, and saved me $900. Genuinely good people."</p>
+        <p class="test-text">"Their services is awesome Our refrigerator quit working around noon and by 4pm it was working again!"</p>
         <div class="test-author">
-          <div class="test-avatar">AK</div>
+          <div class="test-avatar">DB</div>
           <div>
-            <div class="test-name">Amanda K.</div>
-            <div class="test-loc">Shadyside, PA</div>
+            <div class="test-name">Debby B.</div>
+            <div class="test-loc">Google review · Oct 2026</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <p class="test-text">"Matt and Mobin were very professional and polite. They were able to fix my washer in a very short time. Matt explained everything and the bill was reasonable. I would highly recommend their services."</p>
+        <div class="test-author">
+          <div class="test-avatar">JC</div>
+          <div>
+            <div class="test-name">Jody C.</div>
+            <div class="test-loc">Google review · Nov 2026</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <p class="test-text">"William was absolutely wonderful to work with. He quickly diagnosed the problem, ordered the part and in no time my oven was working again. Highly recommend."</p>
+        <div class="test-author">
+          <div class="test-avatar">PL</div>
+          <div>
+            <div class="test-name">Peggy L.</div>
+            <div class="test-loc">Google review · Oct 2026</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <p class="test-text">"Service was quick to schedule and Marlow got our dishwasher up and running fast."</p>
+        <div class="test-author">
+          <div class="test-avatar">RB</div>
+          <div>
+            <div class="test-name">Ryan B.</div>
+            <div class="test-loc">Google review · Nov 2026</div>
           </div>
         </div>
       </div>
@@ -1410,7 +1448,7 @@ footer { background: #0f1117; color: var(--gray-300); padding: 60px 0 24px; }
           </div>
         </a>
         <p>Family-owned appliance repair service serving the Greater Cleveland area, with 15+ years of hands-on experience. Licensed, insured and committed to honest work.</p>
-        <p class="legal-entity">Cleveland Appliance Repair is a service brand of <strong>G-Pro Appliance Repair LLC</strong>.</p>
+        <p class="legal-entity">Cleveland Appliance Repair is a service brand of <strong>Proliance Appliance Repair LLC</strong>.</p>
       </div>
       <div class="footer-col">
         <h5>Services</h5>
@@ -1441,7 +1479,7 @@ footer { background: #0f1117; color: var(--gray-300); padding: 60px 0 24px; }
       </div>
     </div>
     <div class="footer-bottom">
-      <div>© 2026 G-Pro Appliance Repair LLC. All rights reserved. • <a href="#" onclick="openLegal('privacy'); return false;" style="color: var(--gray-300); cursor: pointer;">Privacy Policy</a> • <a href="#" onclick="openLegal('terms'); return false;" style="color: var(--gray-300); cursor: pointer;">Terms of Service</a></div>
+      <div>© 2026 Proliance Appliance Repair LLC. All rights reserved. • <a href="#" onclick="openLegal('privacy'); return false;" style="color: var(--gray-300); cursor: pointer;">Privacy Policy</a> • <a href="#" onclick="openLegal('terms'); return false;" style="color: var(--gray-300); cursor: pointer;">Terms of Service</a></div>
       <div>Licensed • Insured • Bonded</div>
     </div>
   </div>
@@ -1455,7 +1493,7 @@ footer { background: #0f1117; color: var(--gray-300); padding: 60px 0 24px; }
     <div class="legal-updated"><strong>Last updated:</strong> August 26, 2026</div>
 
     <h2>1. Introduction</h2>
-    <p>G-Pro Appliance Repair LLC, operating as Cleveland Appliance Repair ("we", "us", or "our"), operates the website cleveland-appliancerepair.com (the "Service"). This page informs you of our policies regarding the collection, use, and disclosure of personal information when you use our Service.</p>
+    <p>Proliance Appliance Repair LLC, operating as Cleveland Appliance Repair ("we", "us", or "our"), operates the website cleveland-appliancerepair.com (the "Service"). This page informs you of our policies regarding the collection, use, and disclosure of personal information when you use our Service.</p>
     <p>We use your data only to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this policy.</p>
 
     <h2>2. Information We Collect</h2>
@@ -1525,7 +1563,7 @@ footer { background: #0f1117; color: var(--gray-300); padding: 60px 0 24px; }
     <div class="legal-updated"><strong>Last updated:</strong> August 26, 2026</div>
 
     <h2>1. Agreement to Terms</h2>
-    <p>By accessing or using the website cleveland-appliancerepair.com (the "Service") operated by G-Pro Appliance Repair LLC, doing business as Cleveland Appliance Repair ("we", "us", or "our"), you agree to be bound by these Terms of Service ("Terms"). If you disagree with any part of these Terms, please do not use our Service.</p>
+    <p>By accessing or using the website cleveland-appliancerepair.com (the "Service") operated by Proliance Appliance Repair LLC, doing business as Cleveland Appliance Repair ("we", "us", or "our"), you agree to be bound by these Terms of Service ("Terms"). If you disagree with any part of these Terms, please do not use our Service.</p>
 
     <h2>2. Services Provided</h2>
     <p>Cleveland Appliance Repair offers professional appliance repair services for residential customers in the Greater Cleveland area. Our services include but are not limited to:</p>
