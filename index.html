@@ -984,6 +984,10 @@ nav a:hover { color: var(--accent); }
   .logo-icon { height: 46px; width: auto; }
   .logo-text strong { font-size: 13px; }
 }
+.hero-checks { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 0 0 24px; padding: 0; font-size: 13.5px; color: #dbe9e1; }
+.hero-checks li { display: flex; align-items: center; gap: 7px; white-space: nowrap; }
+.hero-checks strong { color: #5bc88a; font-weight: 700; }
+@media (max-width: 600px) { .hero-checks { gap: 8px 14px; font-size: 13px; } }
 </style>
 
 <!-- Google tag (gtag.js) -->
@@ -1030,10 +1034,11 @@ nav a:hover { color: var(--accent); }
       <h1>
         Your Appliance Broke?<br><span class="accent">Same-Day Service</span><br><span id="heroCall" style="font-size:.62em;display:inline-block;margin-top:.35em">📞 Call 8 AM–5 PM &nbsp;·&nbsp; 📅 Book Online 24/7</span></h1>
       <p class="lead">All appliance brands in Cleveland &amp; surrounding suburbs</p>
-      <div class="free-diag-badge">
-        <span class="diag-icon">✓</span>
-        <span><strong>FREE Diagnosis &amp; Warranty</strong> With Any Repair</span>
-      </div>
+      <ul class="hero-checks">
+        <li><span class="diag-icon">✓</span>Licensed &amp; Insured</li>
+        <li><span class="diag-icon">✓</span>Experienced Technicians</li>
+        <li><span class="diag-icon">✓</span><span><strong>FREE Diagnosis</strong> With Repair</span></li>
+      </ul>
       <div class="hero-ctas">
         <a href="#book" class="btn-primary btn-wave">Schedule Now <span class="arrow-anim">→</span></a>
         <a href="tel:2165395060" class="btn-outline"><span class="ring">📞</span> <span class="call-now">Call Now</span> — (216) 539-5060</a>
