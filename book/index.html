@@ -750,6 +750,17 @@ section { padding: 80px 0; }
 .rev-score { font-family:'Bricolage Grotesque', sans-serif; font-weight:800; font-size:20px; color:white; }
 .rev-stars { color: var(--accent); letter-spacing:2px; }
 .rev-count { font-size:14px; color: var(--gray-300); }
+.rev-marquee { overflow: hidden; width: 100%; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+.rev-track { display: flex; gap: 24px; width: max-content; padding: 4px 12px; animation: revScroll 70s linear infinite; }
+.rev-marquee:hover .rev-track, .rev-marquee:active .rev-track { animation-play-state: paused; }
+.rev-track .test-card { width: 340px; flex: 0 0 auto; display: flex; flex-direction: column; }
+.rev-track .test-text { flex: 1; }
+@keyframes revScroll { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+@media (max-width: 600px) { .rev-track .test-card { width: 280px; padding: 22px; } .rev-track { gap: 16px; animation-duration: 55s; } }
+@media (prefers-reduced-motion: reduce) { .rev-track { animation: none; } .rev-marquee { overflow-x: auto; } }
+.hero-stat-link { text-decoration: none; color: inherit; }
+.hero-stat strong .hs-stars { font-size: 15px; letter-spacing: 1px; white-space: nowrap; vertical-align: middle; color: var(--accent); }
+@media (max-width: 600px) { .hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 16px; } .hero-stat { min-width: 0; } .hero-stat strong { white-space: nowrap; } }
 /* Areas */
 .areas-grid {
   display: grid;
@@ -1015,6 +1026,7 @@ footer { background: #0f1117; color: var(--gray-300); padding: 60px 0 24px; }
       <div class="hero-stats">
         <div class="hero-stat"><strong>15+</strong><span>Years Experience</span></div>
         <div class="hero-stat"><strong>90-Day</strong><span>Repair Warranty</span></div>
+        <a class="hero-stat hero-stat-link" href="#reviews"><strong>5.0 <span class="hs-stars">★★★★★</span></strong><span>Google Reviews</span></a>
         <div class="hero-stat"><strong>$25</strong><span>Off First Repair</span></div>
       </div>
     </div>
@@ -1077,6 +1089,241 @@ footer { background: #0f1117; color: var(--gray-300); padding: 60px 0 24px; }
         <button type="submit" class="btn-primary">Request Service →</button>
         <div class="form-msg" id="formMsg" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.7);z-index:9999;align-items:center;justify-content:center;"><div style="background:#fff;border-radius:16px;padding:2.5rem;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.3)"><div style="font-size:48px;margin-bottom:1rem">✅</div><div style="font-size:13px;font-weight:700;letter-spacing:3px;color:#e30713;text-transform:uppercase;margin-bottom:8px">Appointment Confirmed</div><h3 style="font-size:22px;font-weight:800;color:#1a3c6e;margin-bottom:0.75rem">Your Request Has Been Received!</h3><p style="font-size:15px;color:#555;line-height:1.7">Thank you! Our team will contact you within <strong>2 minutes</strong>.</p><button onclick="document.getElementById('formMsg').classList.remove('active')" style="margin-top:1.5rem;background:#e30713;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:15px;font-weight:700;cursor:pointer">Close</button></div></div>
       </form>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials" id="reviews">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag" style="color: var(--accent);">Reviews</span>
+      <h2>What Our Customers Say</h2>
+      <div class="rev-summary"><span class="rev-score">5.0</span><span class="rev-stars">★★★★★</span><span class="rev-count">Google Reviews</span></div>
+      <p>Real Google reviews for Proliance Appliance Repair, our parent company. Same technicians, same standards, now serving Greater Cleveland.</p>
+    </div>
+  </div>
+  <div class="rev-marquee">
+    <div class="rev-track">
+        <div class="test-card">
+          <div class="stars">★★★★★</div>
+          <p class="test-text">"Proliance did a great job and I’m very pleased with their thoroughness. Marlow was able to diagnose the issue within 10 minutes and also provided a detailed explanation of what was wrong. They could have the replacement parts within a matter of days and the service call fee will be taken off the repair costs. Excellent service!"</p>
+          <div class="test-author">
+            <div class="test-avatar">MN</div>
+            <div>
+              <div class="test-name">Mark N.</div>
+              <div class="test-loc">Google review · Oct 2026</div>
+            </div>
+          </div>
+        </div>
+        <div class="test-card">
+          <div class="stars">★★★★★</div>
+          <p class="test-text">"William came to my home and found the issue in sub 10 minutes. Not only that, but he had it fixed and working again (my dryer) in sub 25 mins. I recommend this company to anyone who wants to save time and resources on purchasing a new appliance."</p>
+          <div class="test-author">
+            <div class="test-avatar">NF</div>
+            <div>
+              <div class="test-name">Naomi F.</div>
+              <div class="test-loc">Google review · Oct 2026</div>
+            </div>
+          </div>
+        </div>
+        <div class="test-card">
+          <div class="stars">★★★★★</div>
+          <p class="test-text">"Their services is awesome Our refrigerator quit working around noon and by 4pm it was working again!"</p>
+          <div class="test-author">
+            <div class="test-avatar">DB</div>
+            <div>
+              <div class="test-name">Debby B.</div>
+              <div class="test-loc">Google review · Oct 2026</div>
+            </div>
+          </div>
+        </div>
+        <div class="test-card">
+          <div class="stars">★★★★★</div>
+          <p class="test-text">"Matt and Mobin were very professional and polite. They were able to fix my washer in a very short time. Matt explained everything and the bill was reasonable. I would highly recommend their services."</p>
+          <div class="test-author">
+            <div class="test-avatar">JC</div>
+            <div>
+              <div class="test-name">Jody C.</div>
+              <div class="test-loc">Google review · Nov 2026</div>
+            </div>
+          </div>
+        </div>
+        <div class="test-card">
+          <div class="stars">★★★★★</div>
+          <p class="test-text">"William was absolutely wonderful to work with. He quickly diagnosed the problem, ordered the part and in no time my oven was working again. Highly recommend."</p>
+          <div class="test-author">
+            <div class="test-avatar">PL</div>
+            <div>
+              <div class="test-name">Peggy L.</div>
+              <div class="test-loc">Google review · Oct 2026</div>
+            </div>
+          </div>
+        </div>
+        <div class="test-card">
+          <div class="stars">★★★★★</div>
+          <p class="test-text">"Service was quick to schedule and Marlow got our dishwasher up and running fast."</p>
+          <div class="test-author">
+            <div class="test-avatar">RB</div>
+            <div>
+              <div class="test-name">Ryan B.</div>
+              <div class="test-loc">Google review · Nov 2026</div>
+            </div>
+          </div>
+        </div>
+        <div class="test-card">
+          <div class="stars">★★★★★</div>
+          <p class="test-text">"Great service! Matt was able to come the same day I called and got my dryer up and running before a busy week!"</p>
+          <div class="test-author">
+            <div class="test-avatar">TE</div>
+            <div>
+              <div class="test-name">Terri E.</div>
+              <div class="test-loc">Google review · Oct 2026</div>
+            </div>
+          </div>
+        </div>
+        <div class="test-card">
+          <div class="stars">★★★★★</div>
+          <p class="test-text">"Matt is extremely knowledgeable and very professional, he spoke to me with respect for my home. He was sure to inform me of the cost and procedure in which he would fix the issue and insured me that the problem was solved. I really appreciate working with a Professional!!! Matt Job Well Done!!!"</p>
+          <div class="test-author">
+            <div class="test-avatar">CR</div>
+            <div>
+              <div class="test-name">Clay R.</div>
+              <div class="test-loc">Google review · Oct 2026</div>
+            </div>
+          </div>
+        </div>
+        <div class="test-card">
+          <div class="stars">★★★★★</div>
+          <p class="test-text">"Did a fantastic job, very personable and helpful. They came to fix our problem, discovered another problem and ordered the part at no extra charge to us and promptly came back to fix the situation."</p>
+          <div class="test-author">
+            <div class="test-avatar">AB</div>
+            <div>
+              <div class="test-name">Adam B.</div>
+              <div class="test-loc">Google review · Oct 2026</div>
+            </div>
+          </div>
+        </div>
+        <div class="test-card">
+          <div class="stars">★★★★★</div>
+          <p class="test-text">"Great, friendly, &amp; professional service! Quick diagnostic and fix!"</p>
+          <div class="test-author">
+            <div class="test-avatar">LL</div>
+            <div>
+              <div class="test-name">Lindsay L.</div>
+              <div class="test-loc">Google review · Nov 2026</div>
+            </div>
+          </div>
+        </div>
+        <div class="test-card" aria-hidden="true">
+          <div class="stars">★★★★★</div>
+          <p class="test-text">"Proliance did a great job and I’m very pleased with their thoroughness. Marlow was able to diagnose the issue within 10 minutes and also provided a detailed explanation of what was wrong. They could have the replacement parts within a matter of days and the service call fee will be taken off the repair costs. Excellent service!"</p>
+          <div class="test-author">
+            <div class="test-avatar">MN</div>
+            <div>
+              <div class="test-name">Mark N.</div>
+              <div class="test-loc">Google review · Oct 2026</div>
+            </div>
+          </div>
+        </div>
+        <div class="test-card" aria-hidden="true">
+          <div class="stars">★★★★★</div>
+          <p class="test-text">"William came to my home and found the issue in sub 10 minutes. Not only that, but he had it fixed and working again (my dryer) in sub 25 mins. I recommend this company to anyone who wants to save time and resources on purchasing a new appliance."</p>
+          <div class="test-author">
+            <div class="test-avatar">NF</div>
+            <div>
+              <div class="test-name">Naomi F.</div>
+              <div class="test-loc">Google review · Oct 2026</div>
+            </div>
+          </div>
+        </div>
+        <div class="test-card" aria-hidden="true">
+          <div class="stars">★★★★★</div>
+          <p class="test-text">"Their services is awesome Our refrigerator quit working around noon and by 4pm it was working again!"</p>
+          <div class="test-author">
+            <div class="test-avatar">DB</div>
+            <div>
+              <div class="test-name">Debby B.</div>
+              <div class="test-loc">Google review · Oct 2026</div>
+            </div>
+          </div>
+        </div>
+        <div class="test-card" aria-hidden="true">
+          <div class="stars">★★★★★</div>
+          <p class="test-text">"Matt and Mobin were very professional and polite. They were able to fix my washer in a very short time. Matt explained everything and the bill was reasonable. I would highly recommend their services."</p>
+          <div class="test-author">
+            <div class="test-avatar">JC</div>
+            <div>
+              <div class="test-name">Jody C.</div>
+              <div class="test-loc">Google review · Nov 2026</div>
+            </div>
+          </div>
+        </div>
+        <div class="test-card" aria-hidden="true">
+          <div class="stars">★★★★★</div>
+          <p class="test-text">"William was absolutely wonderful to work with. He quickly diagnosed the problem, ordered the part and in no time my oven was working again. Highly recommend."</p>
+          <div class="test-author">
+            <div class="test-avatar">PL</div>
+            <div>
+              <div class="test-name">Peggy L.</div>
+              <div class="test-loc">Google review · Oct 2026</div>
+            </div>
+          </div>
+        </div>
+        <div class="test-card" aria-hidden="true">
+          <div class="stars">★★★★★</div>
+          <p class="test-text">"Service was quick to schedule and Marlow got our dishwasher up and running fast."</p>
+          <div class="test-author">
+            <div class="test-avatar">RB</div>
+            <div>
+              <div class="test-name">Ryan B.</div>
+              <div class="test-loc">Google review · Nov 2026</div>
+            </div>
+          </div>
+        </div>
+        <div class="test-card" aria-hidden="true">
+          <div class="stars">★★★★★</div>
+          <p class="test-text">"Great service! Matt was able to come the same day I called and got my dryer up and running before a busy week!"</p>
+          <div class="test-author">
+            <div class="test-avatar">TE</div>
+            <div>
+              <div class="test-name">Terri E.</div>
+              <div class="test-loc">Google review · Oct 2026</div>
+            </div>
+          </div>
+        </div>
+        <div class="test-card" aria-hidden="true">
+          <div class="stars">★★★★★</div>
+          <p class="test-text">"Matt is extremely knowledgeable and very professional, he spoke to me with respect for my home. He was sure to inform me of the cost and procedure in which he would fix the issue and insured me that the problem was solved. I really appreciate working with a Professional!!! Matt Job Well Done!!!"</p>
+          <div class="test-author">
+            <div class="test-avatar">CR</div>
+            <div>
+              <div class="test-name">Clay R.</div>
+              <div class="test-loc">Google review · Oct 2026</div>
+            </div>
+          </div>
+        </div>
+        <div class="test-card" aria-hidden="true">
+          <div class="stars">★★★★★</div>
+          <p class="test-text">"Did a fantastic job, very personable and helpful. They came to fix our problem, discovered another problem and ordered the part at no extra charge to us and promptly came back to fix the situation."</p>
+          <div class="test-author">
+            <div class="test-avatar">AB</div>
+            <div>
+              <div class="test-name">Adam B.</div>
+              <div class="test-loc">Google review · Oct 2026</div>
+            </div>
+          </div>
+        </div>
+        <div class="test-card" aria-hidden="true">
+          <div class="stars">★★★★★</div>
+          <p class="test-text">"Great, friendly, &amp; professional service! Quick diagnostic and fix!"</p>
+          <div class="test-author">
+            <div class="test-avatar">LL</div>
+            <div>
+              <div class="test-name">Lindsay L.</div>
+              <div class="test-loc">Google review · Nov 2026</div>
+            </div>
+          </div>
+        </div>
     </div>
   </div>
 </section>
@@ -1251,84 +1498,6 @@ footer { background: #0f1117; color: var(--gray-300); padding: 60px 0 24px; }
   </div>
 </section>
 
-<section class="testimonials">
-  <div class="container">
-    <div class="section-head">
-      <span class="section-tag" style="color: var(--accent);">Reviews</span>
-      <h2>What Our Customers Say</h2>
-      <div class="rev-summary"><span class="rev-score">5.0</span><span class="rev-stars">★★★★★</span><span class="rev-count">69 Google reviews</span></div>
-      <p>Real Google reviews for Proliance Appliance Repair, our parent company. Same technicians, same standards, now serving Greater Cleveland.</p>
-    </div>
-    <div class="test-grid">
-      <div class="test-card">
-        <div class="stars">★★★★★</div>
-        <p class="test-text">"Proliance did a great job and I’m very pleased with their thoroughness. Marlow was able to diagnose the issue within 10 minutes and also provided a detailed explanation of what was wrong. They could have the replacement parts within a matter of days and the service call fee will be taken off the repair costs. Excellent service!"</p>
-        <div class="test-author">
-          <div class="test-avatar">MN</div>
-          <div>
-            <div class="test-name">Mark N.</div>
-            <div class="test-loc">Google review · Oct 2026</div>
-          </div>
-        </div>
-      </div>
-      <div class="test-card">
-        <div class="stars">★★★★★</div>
-        <p class="test-text">"William came to my home and found the issue in sub 10 minutes. Not only that, but he had it fixed and working again (my dryer) in sub 25 mins. I recommend this company to anyone who wants to save time and resources on purchasing a new appliance."</p>
-        <div class="test-author">
-          <div class="test-avatar">NF</div>
-          <div>
-            <div class="test-name">Naomi F.</div>
-            <div class="test-loc">Google review · Oct 2026</div>
-          </div>
-        </div>
-      </div>
-      <div class="test-card">
-        <div class="stars">★★★★★</div>
-        <p class="test-text">"Their services is awesome Our refrigerator quit working around noon and by 4pm it was working again!"</p>
-        <div class="test-author">
-          <div class="test-avatar">DB</div>
-          <div>
-            <div class="test-name">Debby B.</div>
-            <div class="test-loc">Google review · Oct 2026</div>
-          </div>
-        </div>
-      </div>
-      <div class="test-card">
-        <div class="stars">★★★★★</div>
-        <p class="test-text">"Matt and Mobin were very professional and polite. They were able to fix my washer in a very short time. Matt explained everything and the bill was reasonable. I would highly recommend their services."</p>
-        <div class="test-author">
-          <div class="test-avatar">JC</div>
-          <div>
-            <div class="test-name">Jody C.</div>
-            <div class="test-loc">Google review · Nov 2026</div>
-          </div>
-        </div>
-      </div>
-      <div class="test-card">
-        <div class="stars">★★★★★</div>
-        <p class="test-text">"William was absolutely wonderful to work with. He quickly diagnosed the problem, ordered the part and in no time my oven was working again. Highly recommend."</p>
-        <div class="test-author">
-          <div class="test-avatar">PL</div>
-          <div>
-            <div class="test-name">Peggy L.</div>
-            <div class="test-loc">Google review · Oct 2026</div>
-          </div>
-        </div>
-      </div>
-      <div class="test-card">
-        <div class="stars">★★★★★</div>
-        <p class="test-text">"Service was quick to schedule and Marlow got our dishwasher up and running fast."</p>
-        <div class="test-author">
-          <div class="test-avatar">RB</div>
-          <div>
-            <div class="test-name">Ryan B.</div>
-            <div class="test-loc">Google review · Nov 2026</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section id="areas">
   <div class="container">
