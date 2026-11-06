@@ -1039,7 +1039,7 @@ nav a:hover { color: var(--accent); }
         <a href="tel:2165395060" class="btn-outline"><span class="ring">📞</span> <span class="call-now">Call Now</span> — (216) 539-5060</a>
       </div>
       <div class="hero-dispatch">
-        <span class="dispatch-badge on-dark"><span class="live-dot"></span><span id="heroResp">⚡ We respond within minutes</span></span>
+        <span class="dispatch-badge on-dark"><span class="live-dot"></span><span id="heroResp">We respond within minutes ⚡</span></span>
       </div>
       <div class="hero-stats">
         <div class="hero-stat"><strong>15+</strong><span>Years Experience</span></div>
@@ -1928,7 +1928,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 <script>
 (function(){
   function etHour(){try{var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).formatToParts(new Date());for(var i=0;i<p.length;i++){if(p[i].type==='hour')return parseInt(p[i].value,10)%24;}}catch(e){}return new Date().getHours();}
-  function render(){var el=document.getElementById('heroResp');if(!el)return;var h=etHour();el.textContent=(h>=8&&h<17)?'⚡ We respond within minutes':'📅 Book online — we call you at 8 AM';}
+  function render(){var el=document.getElementById('heroResp');if(!el)return;var h=etHour();el.textContent=(h>=8&&h<17)?'We respond within minutes ⚡':'Book online — we call you at 8 AM 📅';}
   render();setInterval(render,60000);
 })();
 </script>
