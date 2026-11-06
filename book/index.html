@@ -965,6 +965,26 @@ footer { background: #0f1117; color: var(--gray-300); padding: 60px 0 24px; }
 }
 
 @media (max-width:900px){.hero-grid .booking-card{order:-1}}
+
+/* Dark header */
+header { background: rgba(15,18,24,0.94); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); box-shadow: 0 1px 0 rgba(255,255,255,0.08); }
+.header-inner { padding: 14px 0; }
+.logo { color: white; gap: 14px; }
+.logo-icon { height: 68px; width: auto; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.45)); }
+.logo-text strong { font-size: 21px; color: white; }
+.logo-text small { color: var(--gray-300); }
+nav a { color: rgba(255,255,255,0.85); }
+nav a:hover { color: var(--accent); }
+.menu-btn { color: white; }
+@media (max-width: 900px) {
+  .header-inner { padding: 10px 0; }
+  .logo-icon { height: 52px; width: auto; }
+  .logo-text strong { font-size: 15px; }
+}
+@media (max-width: 480px) {
+  .logo-icon { height: 46px; width: auto; }
+  .logo-text strong { font-size: 13px; }
+}
 </style>
 
 <!-- Google tag (gtag.js) -->
@@ -1011,7 +1031,7 @@ footer { background: #0f1117; color: var(--gray-300); padding: 60px 0 24px; }
       <div class="hero-tag" id="heroCall">📅 Book online now — we'll call you at 8 AM</div>
       <h1>
         Your Appliance Broke?<br><span class="accent">Book Tonight</span> — We'll Call You at 8 AM</h1>
-      <p class="lead">All appliance brands in Cleveland — 15+ years of experience</p>
+      <p class="lead">All appliance brands in Cleveland &amp; surrounding suburbs</p>
       <div class="free-diag-badge">
         <span class="diag-icon">✓</span>
         <span><strong>FREE Diagnosis &amp; Warranty</strong> With Any Repair</span>
@@ -1830,10 +1850,10 @@ document.querySelector('.menu-btn').addEventListener('click', () => {
   ul.style.top = '100%';
   ul.style.left = '0';
   ul.style.right = '0';
-  ul.style.background = 'white';
+  ul.style.background = '#0f1218';
   ul.style.padding = '20px';
   ul.style.gap = '16px';
-  ul.style.borderBottom = '1px solid #d8dce4';
+  ul.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
 });
 
 // FAQ accordion
